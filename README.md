@@ -26,5 +26,6 @@ bash main_example.sh
 To evaluate the **Phi3_medium_4k_instruct** model separately, please follow the script below:
 
 ```bash
+cd $current_dir
 bash slurm_run_main.sh
 ```
