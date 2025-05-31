@@ -1,0 +1,24 @@
+1. Environment Setup
+```
+pip install accelerate
+pip install attrdict
+pip install transformers
+pip install numpy as np
+pip install pandas as pd
+pip install torch
+pip install fire
+```
+
+2. Evaluation Environment Setup
+```
+sudo apt update
+sudo apt install php
+sudo apt install openjdk-8-jdk
+sudo apt install mono-complete
+sudo apt install g++
+sudo apt install libssl-dev
+
+
+
+```
+
