@@ -16,31 +16,15 @@ pip install pytorch
 
 ## 3. Evaluation
 
-We've created a sample script, **eval.sh**, that demonstrates how to test the **DeepSeek-Coder-1.3b-Base** model on the MultiOOP dataset leveraging **8** GPUs. If your use case involves a different model, simply adjust the script to fit your needs.
-
-Additionally, for various programming languages, the execution path may differ. Please ensure you update the appropriate paths in the **humaneval/execution.py** file accordingly.
+We've created a sample script, **main_example.sh**, that demonstrates how to test the **Phi3_medium_4k_instruct** model on the MultiOOP dataset leveraging **8** GPUs. If your use case involves a different model, simply adjust the script to fit your needs.
 
 ```bash
-MODEL_NAME_OR_PATH="deepseek-ai/deepseek-coder-1.3b-base"
-DATASET_ROOT="data/"
-LANGUAGE="python"
-python -m accelerate.commands.launch --config_file test_config.yaml eval_pal.py --logdir ${MODEL_NAME_OR_PATH} --language ${LANGUAGE} --dataroot ${DATASET_ROOT} 
+cd $current_dir
+bash main_example.sh
 ```
 
-To evaluate the instruction-based model, please follow the script below:
+To evaluate the **Phi3_medium_4k_instruct** model separately, please follow the script below:
+
 ```bash
-LANG="python"
-OUPUT_DIR="output"
-MODEL="deepseek-coder-33b-instruct"
-
-python eval_instruct.py \
-    --model "deepseek-ai/$MODEL" \
-    --output_path "$OUPUT_DIR/${LANG}.$MODEL.jsonl" \
-    --language $LANG \
-    --temp_dir $OUPUT_DIR
+bash slurm_run_main.sh
 ```
-
-## 4. Experimental Results
-
-We report experimental results here for 8 main-stream programming languages, **python**, **c++**, **java**, **PHP**, **TypeScript**, **C#**, **Bash**, and **JavaScript**. For all open-source models, we utilize this repository to obtain the performance of the models on the HumanEval dataset. We set the maximum input length to **4096** and the maximum output length to **500**, and employ the **greedy search strategy**.
-
