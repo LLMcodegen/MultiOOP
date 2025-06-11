@@ -154,7 +154,7 @@ def main(folder_path, case_n):
 
 def arg_main():
     parser = argparse.ArgumentParser()
-    parser.add_argument("--folder_path", type=str, default="/data0/users/wangshuai/main_file/OOP_data/example/save_file/handle_data_79_200_re")
+    parser.add_argument("--folder_path", type=str, default="./MultiOOP/Auto_add_cases/sample")
     parser.add_argument("--case_n", type=int, default=20)
     args = parser.parse_args()
     return args
