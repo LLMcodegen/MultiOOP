@@ -22,8 +22,17 @@ cd $current_dir
 bash Auto_add_cases/exam_run.sh
 ```
 
+## 4. Language translation
 
-## 4. Evaluation
+We provide translation scripts that automatically translate and transform Python programs into **Python, C++, Java, C#, PHP, JavaScript, etc.**
+
+```bash
+cd $current_dir
+python oop_to_multioop.py
+```
+
+
+## 5. Evaluation
 
 We've created a sample script, **main_example.sh**, that demonstrates how to test the **Phi3_medium_4k_instruct** model on the MultiOOP dataset leveraging **8** GPUs. If your use case involves a different model, simply adjust the script to fit your needs.
 
